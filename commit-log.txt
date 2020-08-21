@@ -1,3 +1,48 @@
+commit eb1b373d420b2156b61b34e4788d12fc8ce66a7f
+Merge: 41ba219 645aa78
+Author: SupansaTan <69199037+SupansaTan@users.noreply.github.com>
+Date:   Fri Aug 21 18:56:57 2020 +0700
+
+    Merge pull request #6 from SupansaTan/master
+    
+    Add case when entered wrong type
+
+commit 645aa78e7565af61f62ae58b31c71644c654194a
+Author: Supansa Tantulset <s6201012620236@email.kmutnb.ac.th>
+Date:   Fri Aug 21 18:55:56 2020 +0700
+
+    Add case when entered wrong type
+
+commit 41ba219c7df17cdb943d2b0d355ea1c169729f35
+Merge: cd1bbb5 6385d35
+Author: SupansaTan <69199037+SupansaTan@users.noreply.github.com>
+Date:   Fri Aug 21 18:47:25 2020 +0700
+
+    Merge pull request #5 from SupansaTan/master
+    
+    Fix hardcode and add space between line
+
+commit cd1bbb5339c71a5b887f83fa45f0828f8cb4f7c6
+Merge: 5af4bdc ff1e6a5
+Author: SupansaTan <69199037+SupansaTan@users.noreply.github.com>
+Date:   Fri Aug 21 18:46:57 2020 +0700
+
+    Merge pull request #4 from SikarinKaewjutaniti/master
+    
+    Update 1
+
+commit ff1e6a56bb639625d47a83c8847cc5ec17598a03
+Author: Sikarin <s6001012630152@email.kmutnb.ac.th>
+Date:   Fri Aug 21 18:46:06 2020 +0700
+
+    add commit log
+
+commit 6385d356a22e503ed344fc766a4440cd83d2112d
+Author: Supansa Tantulset <s6201012620236@email.kmutnb.ac.th>
+Date:   Fri Aug 21 18:45:37 2020 +0700
+
+    Fix hardcode and add space between line
+
 commit 7f73957e09689356c63580d2fa1db9c133af7442
 Author: Sikarin <s6001012630152@email.kmutnb.ac.th>
 Date:   Fri Aug 21 18:40:16 2020 +0700
