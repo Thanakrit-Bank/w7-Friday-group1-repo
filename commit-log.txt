@@ -1,0 +1,68 @@
+commit 7f73957e09689356c63580d2fa1db9c133af7442
+Author: Sikarin <s6001012630152@email.kmutnb.ac.th>
+Date:   Fri Aug 21 18:40:16 2020 +0700
+
+    Update 1
+
+commit 5af4bdc66d2d5af8a886539654bc27df1beda33d
+Merge: 1adc96e 2c54368
+Author: SupansaTan <69199037+SupansaTan@users.noreply.github.com>
+Date:   Fri Aug 21 18:14:23 2020 +0700
+
+    Merge pull request #3 from SupansaTan/master
+    
+    Can check winner and end game after have winner
+
+commit 2c54368c20785138ec832e4abab690d23a23c1a9
+Author: Supansa Tantulset <s6201012620236@email.kmutnb.ac.th>
+Date:   Fri Aug 21 18:13:44 2020 +0700
+
+    Can check winner and end game after have winner
+
+commit 1adc96eec6d2832ed367d4a3a3a57f3058e6e5c2
+Author: Thanakrit <s6201012620091@email.kmutnb.ac.th>
+Date:   Fri Aug 21 17:03:28 2020 +0700
+
+    Fix method retrieveValue() in class Board
+
+commit 91c7f6762bb52635e71a002fb0cdb8db175045de
+Merge: 85695ea 6ee0aa5
+Author: SupansaTan <69199037+SupansaTan@users.noreply.github.com>
+Date:   Fri Aug 21 16:18:29 2020 +0700
+
+    Merge pull request #2 from SupansaTan/master
+    
+    Can show marker in board correctly position
+
+commit 6ee0aa53480ae97142326b04b80f7b59c5a8e817
+Author: Supansa Tantulset <s6201012620236@email.kmutnb.ac.th>
+Date:   Fri Aug 21 16:17:45 2020 +0700
+
+    Can show marker in board correctly position
+
+commit 85695ea937987ab398836434569d33cc500801e9
+Author: Thanakrit <s6201012620091@email.kmutnb.ac.th>
+Date:   Fri Aug 21 15:24:22 2020 +0700
+
+    Can show board and count the round
+
+commit daf1b4f32517ce49b9b086c2c3850335c3278420
+Merge: 17120b1 74a9b45
+Author: SupansaTan <69199037+SupansaTan@users.noreply.github.com>
+Date:   Fri Aug 21 14:30:50 2020 +0700
+
+    Merge pull request #1 from SupansaTan/master
+    
+    Edit methods in class Board and TextInput
+
+commit 74a9b45ec2f2eb9c5ba3304e14fd3afd5d6494db
+Author: Supansa Tantulset <s6201012620236@email.kmutnb.ac.th>
+Date:   Fri Aug 21 14:28:57 2020 +0700
+
+    Edit methods in class Board and TextInput
+
+commit 17120b164298797672f89ac60ff33609793cd858
+Author: Thanakrit <s6201012620091@email.kmutnb.ac.th>
+Date:   Fri Aug 21 14:10:39 2020 +0700
+
+    boardGameXO
