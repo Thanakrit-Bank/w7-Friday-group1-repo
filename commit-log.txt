@@ -1,3 +1,24 @@
+commit 9c894f5e1f4db5fd4e58ced56df056635c930a09
+Merge: f027ceb 865edfd
+Author: Thanakrit-Bank <69310175+Thanakrit-Bank@users.noreply.github.com>
+Date:   Fri Aug 21 19:25:17 2020 +0700
+
+    Merge pull request #7 from PhokaPong/master
+    
+    Delete unnescessary file
+
+commit 865edfdd33ebdb2e0e60d6bb2131e43387b44553
+Author: Phoka Pongpaet <s6201012630070@email.kmutnb.ac.th>
+Date:   Fri Aug 21 19:22:17 2020 +0700
+
+    Delete unnescessary file
+
+commit f027ceb652f82d2573670df7291fe779753de7b4
+Author: Thanakrit <s6201012620091@email.kmutnb.ac.th>
+Date:   Fri Aug 21 19:09:38 2020 +0700
+
+    Add commit log
+
 commit eb1b373d420b2156b61b34e4788d12fc8ce66a7f
 Merge: 41ba219 645aa78
 Author: SupansaTan <69199037+SupansaTan@users.noreply.github.com>
