@@ -12,32 +12,41 @@ class Board:
     def startGame(self):
         self.round = 1
         print("Start Game : Tic-Tac-Toe!")
-        
-        while (self.round < 10):
-            if self.player == "" or self.player == 2:  
-                ## Player 1 Turn
-                self.player = 1
-                pos = int(input("\nPlayer 1 turn \nEnter your position 'X': "))
-            
-            else :
-                ## Player 2 Turn
-                self.player = 2
-                pos = int(input("\nPlayer 2 turn \nEnter your position 'O': "))
 
-            self.textInputor.placeMarker(self.player, pos)  ## place marker in position that user entered
-            self.printer.drawBoard()  ## display board
+        try:
+            while (self.round < 10):
+                if self.player == "" or self.player == 2:  
+                    ## Player 1 Turn
+                    self.player = 1
+                    pos = int(input("\nPlayer 1 turn \nEnter your position 'X': "))
+                
+                else :
+                    ## Player 2 Turn
+                    self.player = 2
+                    pos = int(input("\nPlayer 2 turn \nEnter your position 'O': "))
 
-            if not(self.winCheck(self.player)):
-                ## no one win 
-                self.round += 1
-            
+                self.textInputor.placeMarker(self.player, pos)  ## place marker in position that user entered
+                self.printer.drawBoard()  ## display board
+
+                if not(self.winCheck(self.player)):
+                    ## no one win 
+                    self.round += 1
+                
+                else:
+                    ## when have the winner 
+                    print("\n!!! End Game !!!")
+                    break
+
             else:
-                ## when have the winner 
-                print("\n!!! End Game !!!")
-                break
+                print("\nNo player win :( \n!!! Game Over !!!")
+        
+        except ValueError:
+            ## case when entered wrong value, wrong type
+            print("\nYou entered wrong value....Game will start again")
+            self.clearBoard()
+            self.player = ""
+            self.startGame()
 
-        else:
-            print("\nNo player win :( \n!!! Game Over !!!")
             
     def setBoard(self, player, position):
         # place marker X,O at position that user entered
@@ -78,7 +87,10 @@ class Board:
                 return True
                     
         ## No player has win
-        return False           
+        return False     
+
+    def clearBoard(self):
+        self.board = [[" "," "," "],[" "," "," "],[" "," "," "]]
 
 class Printer:       
     def __init__(self, board_obj):
