@@ -1,37 +1,47 @@
 class Board:
     def __init__(self):
-        self.listBoard = [[" "," "," "],[" "," "," "],[" "," "," "]]
-        self.getMark = { 1 : "X", 2 : "O" }
-        self.player = ""
-        self.index = ""
+        self.listBoard = [[" "," "," "],[" "," "," "],[" "," "," "]] ## create empty board
+        self.getMark = { 1 : "X", 2 : "O" }  ## marker of each player
+        self.player = "" 
+        self.index = "" 
+
+        ## link object together
+        self.printer = Printer(self)
+        self.textInputor = TextInput(self)
 
     def startGame(self):
         self.round = 1
         print("Start Game : Tic-Tac-Toe!")
-
+        
         while (self.round < 10):
-            if self.player == "" or self.player == 2:
+            if self.player == "" or self.player == 2:  
+                ## Player 1 Turn
                 self.player = 1
-                pos = int(input("Player 1 turn \nEnter your position 'X': "))
+                pos = int(input("\nPlayer 1 turn \nEnter your position 'X': "))
             
             else :
+                ## Player 2 Turn
                 self.player = 2
-                pos = int(input("Player 2 turn \nEnter your position 'O': "))
+                pos = int(input("\nPlayer 2 turn \nEnter your position 'O': "))
 
-            class3.placeMarker(self.player, pos)
-            class2.drawBoard()
+            self.textInputor.placeMarker(self.player, pos)  ## place marker in position that user entered
+            self.printer.drawBoard()  ## display board
 
             if not(self.winCheck(self.player)):
+                ## no one win 
                 self.round += 1
             
             else:
-                print("!!! End Game !!!")
+                ## when have the winner 
+                print("\n!!! End Game !!!")
                 break
-            print(self.listBoard)
+
         else:
-            print("No player win :( \n!!! Game Over !!!")
+            print("\nNo player win :( \n!!! Game Over !!!")
             
-    def setBoard(self, player, position): ## set marker in board
+    def setBoard(self, player, position):
+        # place marker X,O at position that user entered
+
         if position <= 3 and self.listBoard[0][position-1] == " ":
             self.listBoard[0][position-1] = self.getMark[player]
                 
@@ -54,7 +64,10 @@ class Board:
         elif 6 < position <= 9 :
             return self.listBoard[2][position-7]
         
-    def winCheck(self, player): ## check winner
+    def winCheck(self, player): 
+        # check winner
+        # return True when has winner
+
         for i in range(len(self.listBoard)):
             if (self.listBoard[0][0] == self.listBoard[1][1] == self.listBoard[2][2] != " ") or \
             (self.listBoard[0][2] == self.listBoard[1][1] == self.listBoard[2][0] != " ") or \
@@ -65,26 +78,28 @@ class Board:
                 return True
                     
         ## No player has win
-        return False
-            
+        return False           
 
 class Printer:       
+    def __init__(self, board_obj):
+        self.board = board_obj
+        
     def drawBoard(self): ## display board
+        print("\n")
         for i in range(1,10,3):
-            print(class1.retrieveValue(i), " | ", class1.retrieveValue(i+1), " | ", class1.retrieveValue(i+2))
+            print(self.board.retrieveValue(i), " | ", self.board.retrieveValue(i+1), " | ", self.board.retrieveValue(i+2))
     
 class TextInput:
+    def __init__(self,board_obj):
+        self.board = board_obj
+        
     def placeMarker(self, player, position): ## place the marker in list of board
-        if class1.setBoard(player, position) == False:
+        if self.board.setBoard(player, position) == False:
+            # when enter duplicate position
             print("This position has marker! Please enter other position")
             pos = int(input("Enter your new position : "))
             self.placeMarker(player, pos)
 
-
-# Create object of each class for called in method of other class       
-class1 = Board()
-class2 = Printer()
-class3 = TextInput()
-
 # Start Game ! 
-class1.startGame()
+play = Board()
+play.startGame()
