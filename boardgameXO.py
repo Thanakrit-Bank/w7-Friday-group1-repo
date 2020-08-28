@@ -1,9 +1,7 @@
 class Board:
     def __init__(self):
         self.listBoard = [[" "," "," "],[" "," "," "],[" "," "," "]] ## create empty board
-        self.getMark = { 1 : "X", 2 : "O" }  ## marker of each player
         self.player = "" 
-        self.index = "" 
 
         ## link object together
         self.printer = Printer(self)
@@ -15,17 +13,18 @@ class Board:
 
         try:
             while (self.round < 10):
-                if self.player == "" or self.player == 2:  
+                if self.player == "" or self.player == "O":  
                     ## Player 1 Turn
-                    self.player = 1
+                    self.player = "X"
                     pos = int(input("\nPlayer 1 turn \nEnter your position 'X': "))
                 
                 else :
                     ## Player 2 Turn
-                    self.player = 2
+                    self.player = "O"
                     pos = int(input("\nPlayer 2 turn \nEnter your position 'O': "))
 
                 self.textInputor.placeMarker(self.player, pos)  ## place marker in position that user entered
+                  
                 self.printer.drawBoard()  ## display board
 
                 if not(self.winCheck(self.player)):
@@ -52,13 +51,13 @@ class Board:
         # place marker X,O at position that user entered
 
         if position <= 3 and self.listBoard[0][position-1] == " ":
-            self.listBoard[0][position-1] = self.getMark[player]
+            self.listBoard[0][position-1] = self.player
                 
         elif 3 < position <= 6 and self.listBoard[1][position-4] == " ":
-            self.listBoard[1][position-4] = self.getMark[player]
+            self.listBoard[1][position-4] = self.player
         
         elif 6 < position <= 9 and self.listBoard[2][position-7] == " ":
-            self.listBoard[2][position-7] = self.getMark[player]
+            self.listBoard[2][position-7] = self.player
 
         else:
             return False
@@ -83,7 +82,12 @@ class Board:
             (self.listBoard[i][0] == self.listBoard[i][1] == self.listBoard[i][2] != " ") or \
             (self.listBoard[0][i] == self.listBoard[1][i] == self.listBoard[2][i] != " "):
                 
-                print("\n------ Player {} is winner!------".format(player))
+                if player == "X":
+                    playerTurn = 1
+                else:
+                    playerTurn = 2
+
+                print("\n------ Player {} ({}) is winner!------".format(playerTurn, player))
                 return True
                     
         ## No player has win
@@ -111,6 +115,9 @@ class TextInput:
             print("This position has marker! Please enter other position")
             pos = int(input("Enter your new position : "))
             self.placeMarker(player, pos)
+            return False
+
+        return True
 
 # Start Game ! 
 play = Board()
