@@ -1,3 +1,15 @@
+commit 17a8b2e6013138f7870e46ee4ec4be932872a2cc
+Author: Supansa Tantulset <s6201012620236@email.kmutnb.ac.th>
+Date:   Fri Aug 28 11:33:18 2020 +0700
+
+    Edit Class Board and TextInput
+
+commit 6eb319e03393d1d1ae7a15377b999d58fef0a9b0
+Author: Thanakrit <s6201012620091@email.kmutnb.ac.th>
+Date:   Fri Aug 21 19:27:27 2020 +0700
+
+    Add commit log
+
 commit 9c894f5e1f4db5fd4e58ced56df056635c930a09
 Merge: f027ceb 865edfd
 Author: Thanakrit-Bank <69310175+Thanakrit-Bank@users.noreply.github.com>
